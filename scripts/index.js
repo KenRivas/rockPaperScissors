@@ -13,7 +13,17 @@ function computerPlay(){
     return move;
 }
 
+function toTitleCase(str) {
+    return str.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    );
+  }
+
 function playRound(pSelection, cSelection){
+    pSelection = toTitleCase(pSelection);
     let result = " ";
     if(pSelection === "Rock" && cSelection === "Scissors"){
         result = "You've won, rock beats scissors";
@@ -38,4 +48,4 @@ function playRound(pSelection, cSelection){
     }
     return result;
 }
-console.log(playRound("Scissors", computerPlay()));
+console.log(playRound("ScissorS", computerPlay()));
