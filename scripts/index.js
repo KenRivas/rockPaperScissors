@@ -27,6 +27,7 @@ function playRound(pSelection, cSelection){
     let result = " ";
     if(pSelection === "Rock" && cSelection === "Scissors"){
         result = "You've won, rock beats scissors";
+        
     }
     else if(pSelection === "Rock" && cSelection === "Paper"){
         result = "You've lost! Paper beats rocks";
@@ -51,8 +52,12 @@ function playRound(pSelection, cSelection){
 
 function game(){
     for(i=1; i<=5; i++){
+        let playerPoints = 0;
         let playerInput = prompt("Please enter a move:", "Harry Potter");
-        console.log(playRound(playerInput, computerPlay()));
+        let result = playRound(playerInput, computerPlay());
+        if(result = "You've won, rock beats scissors" || "You've won! Paper beats rocks" || "You've won! Scissors beats papers"){
+            playerPoints += 1;
+        }
     }
 }
 game();
