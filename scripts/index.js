@@ -51,8 +51,8 @@ function playRound(pSelection, cSelection){
 }
 
 function game(){
+    let playerPoints = 0;
     for(i=1; i<=5; i++){
-        let playerPoints = 0;
         let playerInput = prompt("Please enter a move:", "Harry Potter");
         let result = playRound(playerInput, computerPlay());
         console.log(result);
