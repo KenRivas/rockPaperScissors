@@ -48,4 +48,11 @@ function playRound(pSelection, cSelection){
     }
     return result;
 }
-console.log(playRound("ScissorS", computerPlay()));
+
+function game(){
+    for(i=1; i<=5; i++){
+        let playerInput = prompt("Please enter a move:", "Harry Potter");
+        console.log(playRound(playerInput, computerPlay()));
+    }
+}
+game();
