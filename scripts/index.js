@@ -55,9 +55,16 @@ function game(){
         let playerPoints = 0;
         let playerInput = prompt("Please enter a move:", "Harry Potter");
         let result = playRound(playerInput, computerPlay());
+        console.log(result);
         if(result = "You've won, rock beats scissors" || "You've won! Paper beats rocks" || "You've won! Scissors beats papers"){
             playerPoints += 1;
         }
+    }
+    if(playerPoints >= 3){
+        console.log("Congrats! You've won the most rounds!")
+    }
+    else{
+        console.log("Sorry, you've failed to win 3 rounds, you've lost, better try next time!")
     }
 }
 game();
